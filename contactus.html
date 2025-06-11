@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Load Navbar -->
+<div id="navbar-container"></div>
+
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
+</head>
+
+    <style>
+        body
+        
+        {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background:rgb(160, 205, 209);
+            color: #333;
+        }
+        .contact-container {
+            padding: 50px 5%;
+            background: linear-gradient(to bottom,#8EBF8F 100%);
+        }
+        .contact-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: #e4c6d6;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-section, .info-section {
+            flex: 1;
+        }
+        .form-section h2, .info-section h2 {
+            color: rgb(67, 65, 222);
+            font-size: 24px;
+        }
+        .form-section input, .form-section textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-section button {
+            background: #E87E3B;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .form-section button:hover {
+            background: #D36A2A;
+        }
+        .info-section a {
+            color: #E87E3B;
+            text-decoration: none;
+        }
+        .info-section a:hover {
+            text-decoration: underline;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .contact-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <h1 style="text-align: center; color: rgb(220, 146, 7);">Contact Us</h1>
+
+    <div class="contact-box">
+        <div class="form-section">
+            <h2>Enquire Now</h2>
+            <form>
+                <input type="text" placeholder="Parent Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Mobile Number" required>
+                <input type="text" placeholder="Child's Age" required>
+                <input type="text" placeholder="Your Resident Pincode" required>
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="info-section">
+            <h2>Reach Us</h2>
+            <p>Near Telecom Nagar Extension Gachibowli,Hyd,TS,India.</p>
+            <p><strong>LandMark:</strong> plot no:cyber meadows society</p>
+            <p><strong>Contact:</strong> <a href="">suhasaearlylearning@gmail.com</a></p>
+            <p><strong>Phone:</strong> +91 8985942970</p>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5792116676157!2d78.3657759!3d17.4319701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb938f27162edb%3A0x2ce8744848747b45!2ssuhasa%20earlylearning%20center!5e0!3m2!1sen!2sin!4v1742791749449!5m2!1sen!2sin" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<!-- Load Navbar -->
+<div id="navbar-container"></div>
+
+
+
+</html>

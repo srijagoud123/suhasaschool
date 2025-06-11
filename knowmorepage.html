@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Learning Engaging</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Navbar container */
+        #navbar-container {
+           
+            top: 10;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure navbar stays on top */
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 2000px;
+            padding: 40px;
+            
+           
+            /* Push content down to avoid overlapping the navbar */
+            margin:5px auto; /* Centered horizontally and adjusted vertically */
+        }
+
+        h1 {
+            font-size: 60px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background: #fdd835;
+            padding: 0  10px;
+        }
+        .footer {
+        background-color: #FFD700;
+        text-align: center;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+          border-radius:8px;
+        }
+
+        .footer span:nth-child(1) {
+        color: #B22222;
+        }
+        .footer span:nth-child(3) {
+        color: #1E90FF;
+        }
+
+
+       .container p {
+            font-size: 25px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .header-image {
+            width: 300px;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script>
+        // Load navbar dynamically
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1><span class="highlight">ABOUT US</span></h1>
+
+        <p><bold>
+         AT SUHASA we believe that Early Childhood Education is crucial because it marks a critical period of rapid brain development where experiences and opportunities lay the foundation for future learning, social skills, and overall well-being, impacting a child's trajectory throughout life; essentially, high-quality early childhood education can significantly improve cognitive, social, and emotional development, setting children up for success in school and beyond.<br><br>
+
+Our state-of-art SUHASA Day Care facility we provide your young children with a quality preschool experience in a safe and nurturing environment.  A play-based, developmentally appropriate curriculum provides experience for academic and social growth.<br><br>
+
+SUHASA's Literacy-based Curriculum
+In Pre-Kindergarten and Kindergarten classrooms, the learning environment is the curriculum foundation.  Classrooms are divided into well-defined learning areas that encourage exploration, work, and active learning through individual, small-group, and large-group activities.<br> Learning Centers include dramatic play, art, music, creative expression, construction, science, reading/language, writing/literacy and sensory exploration.  Children are a part of the planning process, making suggestions for themes and topics to investigate.<br><br>
+
+
+
+
+<Bold><strong>SUHASA GOALS:></strong></Bold><br>
+•	Provide meaningful developmentally appropriate learning experiences based on the individual developmental needs of each child<br>
+•	Help children value and respect themselves and others<br>
+•	Stimulate creativity and self-expression<br>
+•	Promote language and literacy skills<br>
+•	Stimulate cognitive development<br>
+•	Promote health, physical growth, and motor development<br>
+•	Encourage self-discipline<br>
+•	Help children become accepting, caring individuals and develop supportive and helpful classroom relationships
+         </bold> </p>
+
+        <img src="images/logo.jpg" alt="suhasalogo" class="header-image">
+    </div>
+    <div class="footer">
+        <span>Learn</span> · <span>Play</span> · <span>Create</span>
+    </div>
+
+</body>
+</html>

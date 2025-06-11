@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade I and II</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #fffbe6;
+    margin: 0;
+    padding: 0;
+    }
+    
+
+.poster {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.header {
+    text-align: center;
+    background-color: #8BC34A;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section.reverse {
+    flex-direction: row-reverse;
+    
+
+}
+
+.text {
+    width: 50%;
+    padding: 20px;
+    margin-top: 0px;
+}
+
+.text h2 {
+    color: #4CAF50;
+}
+
+.text ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.image {
+    width: 40px;
+    text-align: center;
+}
+
+.image img {
+    width: 150px;
+    height: auto;
+}
+
+.footer {
+    background-color: #FFD700;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 8px;
+}
+
+.footer span:nth-child(1) {
+    color: #B22222;
+}
+.footer span:nth-child(3) {
+    color: #1E90FF;
+}
+</style>
+<!-- Navbar will be loaded here -->
+<div id="navbar-container"></div>
+
+<script>
+    // Load the navbar using fetch
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch navbar');
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    });
+</script>
+<body>
+    <div class="poster">
+        <div class="header">
+            <h1>Grade I and II</h1>
+        </div>
+
+        <div class="section reverse">
+            <div class="image">
+                <img src="images/kidsabc.jpg" alt="ABC blocks">
+                <img src="images/kida.jpg" alt="Kids reading">
+
+            </div>
+            <div class="text">
+                <h2>Literacy</h2>
+                <ul>
+                    Phonemic awareness<br>
+                    Phonics<br>
+                    Vocabulary Development<br>
+                    Reading fluency<br>
+                    Comprehension<br>
+                    Developing writing skills
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image">
+                <img src="images/kidswritingboard.jpg" alt="Kids writing">
+                <img src="images/kidslearning.jpg" alt="Kids learning ">
+            </div>
+            <div class="text">
+                <h2>Numeracy</h2>
+                <ul>
+                    Number Recognition and counting<br>
+                    Basic math operations<br>
+                    Problem solving<br>
+                    Measurement and Basic geometry<br>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="image">
+                <img src="images/kidstable.jpg" alt="Kids reading together">
+                <img src="images/kidsitting.jpg" alt="Kids sitting">
+            </div>
+            <div class="text">
+                <h2>Social and Emotional development</h2>
+                <ul>
+                    Self-Awareness<br>
+                    Empathy<br>
+                    Fine Motor skills<br>
+                    Gross Motor skills<br>
+                    Coordination<br>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>Learn</span> · <span>Play</span> · <span>Create</span>
+        </div>
+    </div>
+</body>
+</html>

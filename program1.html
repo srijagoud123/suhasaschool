@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todler program</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Navbar container */
+        #navbar-container {
+           
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure navbar stays on top */
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            border: 5px solid #fdd835; /* Border added */
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            
+            /* Push content down to avoid overlapping the navbar */
+            margin: 150px auto; /* Centered horizontally and adjusted vertically */
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background: #fdd835;
+            padding: 0 10px;
+        }
+        .footer {
+        background-color: #FFD700;
+        text-align: center;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        border-radius: 8px;
+         }
+
+       .footer span:nth-child(1) {
+        color: #B22222;
+        }
+        .footer span:nth-child(3) {
+        color: #1E90FF;
+        }
+
+
+        p {
+            font-size: 18px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .header-image {
+            width: 300px;
+            margin-top: 30px;
+        }
+       
+        .brush-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+        background: url('brushstroke.png') no-repeat center;
+        background-size: 60%;
+        padding: 20px 40px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        }
+    </style>
+
+    <script>
+        // Load navbar dynamically
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1><span class="highlight">Toddler Program/Pre-K1</span></h1>
+
+        <p>
+            Developing safe and healthy habits
+            Fostering positive self-esteem
+            Providing opportunities for creative expression
+            Supporting the development of social skills
+            Stimulating cognitive problem-solving
+            Strengthening listening, reading, writing, and speaking skills
+            Enhancing fine motor and gross motor skills
+            Assessing the individual needs
+        </p>
+
+        <img src="images/boygirl.jpg" alt="Kids holding hands in a circle" class="header-image">
+    </div>
+    <body>
+    <div class="brush-text">
+        Learn • Play • Create
+    </div>
+    </body>
+
+</body>
+
+</html>

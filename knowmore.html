@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know more</title>
+
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+            background: #ffffff;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Header Styling */
+        .header {
+            background: linear-gradient(to right, #e4803c, #e4803c);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        /* Section Container */
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        /* Content Area */
+        .content {
+            flex: 1;
+            padding: 0 40px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Image Styling */
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: 300px;
+            border-radius: 16px;
+            border: 3px solid #f7b977;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Alternate Layout */
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                padding: 0 20px;
+            }
+
+            .image-container {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+    <!-- Header -->
+    <div class="header">Why Join Us</div>
+
+    <!-- Section 1 -->
+    <div class="section">
+        <div class="content">
+            <h2>A Vibrant and Fun-filled Learning Space</h2>
+            <p>
+                At Vriksham Ant Hill, we believe that before we put a pencil into a child’s hand, these hands should dig, climb, press, push, pull, squish, twist, and pinch in various environments and with a wide variety of materials. Surrounded by green trees, bunnies, guinea pigs, and chirping birds, we create a joyful, inspiring, and encouraging environment for children.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="images/image1.png" alt="Learning Space">
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section reverse">
+        <div class="content">
+            <h2>Multifaceted Early Childhood Development</h2>
+            <p>
+                Through exciting, innovative techniques and best learning practices, we strive to develop a love for learning, understand the importance of nature and sustainability, think creatively, and create a sense of compassion towards all living beings. Our programs emphasize social and emotional well-being.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="images/image2.png" alt="Child Development">
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="content">
+            <h2>Exposure to Diversity and Cultural Awareness</h2>
+            <p>
+                An inclusive and holistic academic curriculum coupled with our talented and professional staff helps children explore and celebrate diversity. We foster a community that encourages self-expression, cultural awareness, and mutual respect.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="images/image3.jpg" alt="Diversity and Awareness">
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programs- Suhasa School</title>
+    <div id="navbar-container"></div>
+
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #2c3e50;
+        }
+
+        .why-join-section {
+            text-align: center;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            padding: 20px 20px;
+        }
+
+        .why-join-section h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .content-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .content-text {
+            flex: 1;
+        }
+
+        .content-text h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .content-text p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .content-image {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .content-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 5px solid #fdd835; /* Border added */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-card:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .content-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--All programs -->
+    <div class="why-join-section">
+        <h1>Programs Offered</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+
+        <!-- Card 1 -->
+        <div class="content-card">
+            <div class="content-text">
+                <h2>Day Care</h2>
+                <p class="paragraph"> “Growing Minds, Nuturing Heart”
+              A place for your child first steps, words and friendships begin under the loving care of trained SUHASA Staff
+              6 months-2 years</p>
+            </div>
+            <div class="content-image">
+                <img src="images/programms1.jpg" alt="Learning Space">
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="content-card">
+            <div class="content-text">
+                <h2>Pre-Kinder Garten I&II</h2>
+                <p class="paragraph"> “Where Little Learner’s Begin Big Adventures”
+              At SUHASA we nurture curious minds while setting the foundation for a lifetime of learning
+              3 years old for Pre-KI
+              4 years old for Pre-II</p>
+            </div>
+            <div class="content-image">
+                <img src="images/programms2.jpg" alt="Early Childhood Development">
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="content-card">
+            <div class="content-text">
+                <h2>Kinder Garten I&II</h2>
+                <p class="paragraph">“Stepping into a lifetime of discovery with little explorers learning to take big steps”
+              At SUHASA we nurture curious minds and kind hearts in a world of discovery. Building tomorrow’s brightest stars through play, creativity and joy.
+              4 years old- KG I 
+              5 years old- KG II</p>
+            </div>
+            <div class="content-image">
+                <img src="images/programms3.jpeg" alt="Diversity and Culture">
+            </div>
+        </div>
+  <!-- Card 4 -->
+  <div class="content-card">
+    <div class="content-text">
+        <h2>Special Program</h2>
+        <p>Summer Camps: Engaging activities during summer to continue learning and social interaction.
+
+              After-School Enrichment: Additional programs focusing on arts, sports, or academics beyond regular school hours. </p>
+    </div>
+    <div class="content-image">
+        <img src="images/programms4.jpeg" alt="Learning Space">
+    </div>
+</div>
+ <!-- Card 5-->
+ <div class="content-card">
+    <div class="content-text">
+        <h2>kindergarten +4 years</h2>
+        <p class="paragraph">Strengthening bonds around the classroom as part of a global community
+Target # of students:20 per class Half Day 8:00 am-12:00pm </p>
+    </div>
+    <div class="content-image">
+        <img src="images/preprogramms5.jpeg" alt="Learning Space">
+    </div>
+</div>
+ <!-- Card 6-->
+ <div class="content-card">
+    <div class="content-text">
+        <h2>Kindergarten +5 years</h2>
+        <p class="paragraph">Establishing healthy habits to become socially responsible global citizens.
+Target # of students:20 per class Half Day 8:00 am-12:00pm</p>
+    </div>
+    <div class="content-image">
+        <img src="images/preprogramms7.jpeg" alt="Learning Space">
+    </div>
+</div>
+ <!-- Card 7 -->
+ <div class="content-card">
+    <div class="content-text">
+        <h2>Grade 1/+6 years</h2>
+        <p class="paragraph"> Engaging students in a literacy based, thematic and integrated curriculum of math, language arts, social studies & science, as well as continuing their cognitive and social development.
+Target # of students:25 per class Full Day 8:00 am-3:00pm .</p>
+    </div>
+    <div class="content-image">
+        <img src="images/preprogramms8.jpeg" alt="Learning Space">
+    </div>
+</div>
+ <!-- Card 8 -->
+ <div class="content-card">
+    <div class="content-text">
+        <h2>Grade 2/+7 years</h2>
+        <p class="paragraph">Building on top of social, language, and literacy skills learned earlier in Grade 1, by expanding upon them, immersing students in a structured curriculum that develops curiosity and retention of information around a variety of subjects. Target # of students:25 per class Full Day 8:00 am-3:00pm</p>
+    </div>
+    <div class="content-image">
+        <img src="images/preprogramms9.jpeg" alt="Learning Space">
+    </div>
+</div>
+ <!-- Card 9-->
+ <div class="content-card">
+    <div class="content-text">
+        <h2> Parent-Toddler Programs</h2>
+        <p class="paragraph"> Designed for parents and toddlers to participate together, fostering bonding and early development.</p>
+    </div>
+    <div class="content-image">
+        <img src="images/kids 2.jpg" alt="Learning Space">
+    </div>
+</div>
+    </div>
+
+</body>
+
+</html>

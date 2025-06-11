@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Program</title>
+    </head>
+    <style>
+body {
+    background-color: #faf6ed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content-container {
+    position: relative;
+    width: 700px;
+    margin: 50px auto;
+    padding: 50px 40px;
+    background-color:rgb(123, 220, 220);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.top-image {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.side-image {
+    position: absolute;
+    width: 80px;
+    top: 200px;
+}
+.left-inside {
+    left: 20px; /* Keep image inside white box */
+    width: 115px;
+    padding-top: 390px;
+    
+}
+
+
+
+.right-inside {
+    right: 20px; /* Keep image inside white box */
+    width: 120px;
+    padding-top: 600px;
+}
+
+.text-content h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: aqua;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.text-content h2 {
+    font-size: 22px;
+    color: #444;
+    margin-top: 20px;
+}
+
+.text-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    
+}
+.bottom-inside{
+    width: 160px;
+    margin-top: 5px;
+    
+}
+.footer {
+    background-color: #FFD700;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 8px;
+}
+
+.footer span:nth-child(1) {
+    color: #B22222;
+}
+.footer span:nth-child(3) {
+    color: #1E90FF;
+}
+
+
+</style>
+<!-- Navbar will be loaded here -->
+<div id="navbar-container"></div>
+
+<script>
+    // Load the navbar using fetch
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch navbar');
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    });
+    </script>
+<body>
+    <div class="content-container">
+          
+           <img src="images/kidspainting.jpg" alt="Children left" class="side-image left-inside">
+           <img src="images/kidsbox.jpg" alt="Children right" class="side-image right-inside">
+       
+       
+        
+        <div class="text-content">
+            <h1>Special Program</h1>
+            <p>Our Special Programs are designed to enhance learning and creativity beyond the classroom.</p>
+            <h2>Summer Camps</h2>
+            <p>Fun, hands-on activities that keep learning alive through art, science experiments, outdoor games, and teamwork challenges during summer break.</p>
+            <h2>After-School Enrichment</h2>
+            <p>A variety of classes and activities focused on arts, music, sports, and academic support to help students explore their passions.</p>
+            <h2>Skill Development Workshops</h2>
+            <p> Short-term programs to help children develop public speaking, critical thinking, and leadership skills.</p>
+            <h2>Cultural Events</h2>
+            <p>Activities that celebrate festivals, traditions, and diverse cultures to broaden children’s horizons.</p>
+           
+            
+    </div>
+    <div class="footer">
+        <span>Learn</span> · <span>Play</span> · <span>Create</span>
+    </div>
+</body>
+</html>

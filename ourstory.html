@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our story</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* Section Styling */
+        .why-us-section {
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+        }
+
+        .why-item {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center content horizontally */
+            text-align: center;
+            margin-bottom: 40px; /* Space between items */
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color:rgb(235, 237, 199);
+        }
+
+        /* Image Styling */
+        .why-item img {
+            width: 100%;
+            max-width: 400px; /* Responsive image width */
+            border-radius: 12px;
+        }
+
+        /* Content Styling */
+        .why-content {
+            margin-top: 20px; /* Space between image and content */
+        }
+
+        .why-content h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .why-content p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style> 
+</head>
+<body>
+
+
+    <div id="navbar-container"></div>
+
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+    <!-- Why Us Section -->
+    <section class="why-us-section">
+        <h2>Why Us</h2>
+
+        <!-- Reason 1 -->
+        <div class="why-item">
+            <img src="images/suhasapic.jpg" alt="Vibrant Learning Space">
+            <div class="why-content">
+                <h3>About Us</h3>
+                <p>
+                    Sri Satyanarayana Educational Society, having over 40 years of experience in the field, is committed to providing quality education for children and creating a positive change in society by launching Suhasa, a premium early childhood learning center.
+                </p>
+            </div>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="why-item">
+            <img src="images/suhasapic2.jpg" alt="Early Development">
+            <div class="why-content">
+                <h3>Why Choose Us</h3>
+                <p>
+                    We aim to create a premium hands-on learning environment where children develop not only academically but also emotionally, socially, and physically.
+                </p>
+            </div>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="why-item">
+            <img src="images/suhasapic3.jpg" alt="Comprehensive Curriculum">
+            <div class="why-content">
+                <h3>We Value</h3>
+                <p>
+                    Individualized attention, inquiry-based learning, nurturing creativity, experiential learning, and holistic development.
+                </p>
+            </div>
+        </div>
+
+        <!-- Reason 4 -->
+        <div class="why-item">
+            <img src="images/suhasapic4.jpg" alt="Safe Environment">
+            <div class="why-content">
+                <h3>Our Facilities</h3>
+                <p>
+                    Bright, welcoming classrooms, outdoor play areas, and dedicated music and art spaces ensure a safe and engaging environment.
+                </p>
+            </div>
+        </div>
+
+        <!-- Reason 5 -->
+        <div class="why-item">
+            <img src="images/suhasapic5.jpg" alt="Combined Effort">
+            <div class="why-content">
+                <h3>It's a Combined Effort</h3>
+                <p>
+                    We believe in strong collaboration between parents and teachers to foster the best environment for child development.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

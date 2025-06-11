@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>why us</title>
+    <div id="navbar-container"></div>
+     <style>
+    .header-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 200px; /* Adjust width as needed */
+      margin-top: 1cm;
+    }
+
+    .center-title {
+      text-align: center;
+      color: #cc6600; /* Optional: for orange title */
+    }
+    .whyus1{
+margin-top: -2.2cm;
+    }
+  </style>
+
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+ 
+</head>
+<body>
+     <!------   --  ---------------------why us ------------------------------>
+     <img src="images/logo.jpg" alt="Suhasa Logo" class="header-image">
+     <section class="why-us-section">
+    
+    <section class="whyus1">
+      <h2>SUHASA<br>Early Childhood Learning Center</h2>
+    </section>
+  <!-- Reason 1 -->
+    <div class="why-item">
+      <img src="images/visionimg.jpg" alt="Vibrant Learning Space">
+      <div class="why-content">
+        <h3>Mission</h3>
+        <p>
+Intentionally building a collaborative learning community while celebrating the strengths of all learners and supporting the growth of early learning skills through developmentally appropriate practices to build a foundation for learning.
+
+
+        </p>
+      </div>
+    </div>
+  
+    <!-- Reason 2 -->
+    <div class="why-item reverse">
+      <img src="images/missionimage.jpg" alt="Early Development">
+      <div class="why-content">
+        <h3>Qualified and Passionate Educators</h3>
+        <p>
+          Highlight the credentials and dedication of your teaching staff, emphasizing their expertise in early childhood development.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Reason 3 -->
+    <div class="why-item">
+      <img src="images/corevaluesimg.jpg" alt="Comprehensive Curriculum">
+      <div class="why-content">
+        <h3> Literary -Based Integrated Curriculum</h3>
+        <p>
+ A literacy-based integrated curriculum for an early childhood center weaves reading, writing, speaking, and listening skills throughout all subject areas and daily activities, using children's literature and language experiences as the foundation for learning in science, math, social studies, and the arts. 
+        </p>
+      </div>
+    </div>
+  
+    <!-- Reason 4 -->
+    <div class="why-item reverse">
+      <img src="images/safetymeetsimg.jpg" alt="Safe Environment">
+      <div class="why-content">
+        <h3>Safe and Stimulating Learning Environment</h3>
+        <p>
+          Showcase how your facilities are designed to be both secure and conducive to exploration and learning.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Reason 5 -->
+    <div class="why-item">
+      <img src="images/baby2.jpg" alt="Individual Attention">
+      <div class="why-content">
+        <h3>Parental Engagement</h3>
+        <p>
+            Suhasa believes in creating meaningful partnerships between families and educators to support children's development and learning both at school and at home.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Reason 6 -->
+    <div class="why-item reverse">
+      <img src="images/suhasa7.jpg" alt="Parental Involvement">
+      <div class="why-content">
+        <h3>Discover Learn Connect  and Grow</h3>
+        <p>
+             
+        </p>
+      </div>
+    </div>
+
+  
+    <!-- Reason 7 (NEW) 
+    <div class="why-item">
+      <img src="suhasapic7.jpg" alt="Extracurricular Activities">
+      <div class="why-content">
+        <h3>Enriching Extracurricular Activities</h3>
+        <p>
+          Offer a variety of extracurricular programs that promote creativity, physical health, and teamwork beyond academic learning.
+        </p>
+      </div>
+    </div>
+  
+    <!Reason 8 (NEW) 
+    <div class="why-item reverse">
+      <img src="suhasapic8.jpg" alt="Technology Integration">
+      <div class="why-content">
+        <h3>Innovative Technology Integration</h3>
+        <p>
+          Leverage modern technology to enhance learning, fostering digital literacy and preparing children for future technological advancements.
+        </p>
+      </div>
+    </div>
+  
+  </section> *>
+</body>
+</html>

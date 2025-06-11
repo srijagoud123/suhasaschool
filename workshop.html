@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops</title>
+    <div id="navbar-container"></div>
+
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #2c3e50;
+        }
+
+        .why-join-section {
+            text-align: center;
+            background: linear-gradient(135deg,rgb(137, 137, 219),rgb(212, 129, 129));
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .why-join-section h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .content-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .content-text {
+            flex: 1;
+        }
+
+        .content-text h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            
+        }
+
+        .content-text p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .content-image {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .content-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 5px solid #fdd835; /* Border added */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-card:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .content-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--workshops-->
+    <div class="why-join-section">
+        <h1>Workshops</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+
+        <!-- Card 1 -->
+        <div class="content-card">
+            <div class="content-text">
+                <h2>Professional Development Workshops</h2>
+                <p class="paragraph">Effective Classroom Communication: Training educators in mindfulness and language strategies to enhance classroom
+                    interactions.  </p>
+                    <p class="paragraph"> Stress Management for Educators: Providing techniques to handle stress, promoting well-being among teachers.  
+                        Anti-Bias Education: Workshops aimed at fostering inclusive classrooms and addressing biases.  </p>
+            </div>
+            <div class="content-image">
+                <img src="images/workshop1.jpeg" alt="Learning Space">
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="content-card">
+            <div class="content-text">
+                <h2>Parent and Family Workshops</h2>
+                <p class="paragraph"> • Family Engagement Strategies: Sessions designed to strengthen collaboration between families and the school.  
+                    • Supporting Multilingual Learners at Home: Guidance for families to assist children learning multiple languages. </p>
+
+            </div>
+            <div class="content-image">
+                <img src="images/workshop2.jpeg" alt="Early Childhood Development">
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="content-card">
+            <div class="content-text">
+                <h2>Student Enrichment Workshops</h2>
+                <p class="paragraph">play-Based Learning Activities: Interactive sessions emphasizing the importance of play in learning.  
+                    • STEM Exploration: Workshops introducing foundational concepts in science, technology, engineering, and math.</p>
+            </div>
+            <div class="content-image">
+                <img src="images/workshop3.jpeg" alt="Diversity and Culture">
+            </div>
+        </div>
+  <!-- Card 4 -->
+  <div class="content-card">
+    <div class="content-text">
+        <h2>Community Engagement Workshops</h2>
+        <p class="paragraph">  • Intergenerational Programs: Initiatives like “grandfriends,” where elderly community members engage with students to
+            enhance social skills and confidence.  
+           • Environmental Awareness: Activities such as gardening to teach children about sustainability and nature.  </p>
+    </div>
+    <div class="content-image">
+        <img src="images/workshop4.jpeg" alt="Learning Space">
+    </div>
+</div>
+ <!-- Card 5-->
+ <div class="content-card">
+    <div class="content-text">
+        <h2>Specialized Training Workshops</h2>
+        <p class="paragraph">• Responding to Disasters: Preparing educators and families to support children during and after emergencies.  • Soft Skills Development: Focusing on enhancing children’s social and emotional competencies.  </p>
+    </div>
+    <div class="content-image">
+        <img src="images/workshop5.jpeg" alt="Learning Space">
+    </div>
+</div>
+ 
+    </div>
+
+</body>
+
+</html>

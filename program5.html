@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery Program</title>
+    </head>
+    <style>
+body {
+    background-color: #faf6ed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content-container {
+    position: relative;
+    width: 700px;
+    margin: 50px auto;
+    padding: 50px 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.top-image {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.side-image {
+    position: absolute;
+    width: 80px;
+    top: 120px;
+}
+
+.left-inside {
+    left: 20px;  /* Keep image inside white box */
+    width: 160px;
+    padding-top: 200px;
+
+   
+}
+
+.right-inside {
+    right: 20px; /* Keep image inside white box */
+    width: 200px;
+    padding-top: 200px;
+}
+
+.text-content h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: aqua;
+    display: inline-block;
+    border-radius: 10px;
+}
+.footer {
+    background-color: #FFD700;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 8px;
+}
+
+.footer span:nth-child(1) {
+    color: #B22222;
+}
+.footer span:nth-child(3) {
+    color: #1E90FF;
+}
+
+
+.text-content h2 {
+    font-size: 22px;
+    color: #444;
+    margin-top: 20px;
+}
+
+.text-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    
+}
+.bottom-inside{
+    width: 300px;
+    margin-top: 5px;
+    
+}
+</style>
+<!-- Navbar will be loaded here -->
+<div id="navbar-container"></div>
+
+<script>
+    // Load the navbar using fetch
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch navbar');
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    });
+    </script>
+<body>
+    <div class="content-container">
+           <img src="images/kidstalking.jpg" alt="Children Left" class="side-image left-inside">
+       
+        <img src="images/kidsdrawing.jpg" alt="Children Right" class="side-image right-inside">
+        
+       
+        
+        <div class="text-content">
+            <h1>Nursery program/ Pre K ||</h1>
+            <h2>Language and Literacy Development</h2>
+            <p>Listening and speaking, Vocabulary, Pre-Reading Skills,Rhyme and Rhythm</p>
+            <h2>Mathematical Development</h2>
+            <p>Number Recognition, Problem-Solving, Shape and Size.</p>
+            <h2>Self-Regulation</h2>
+            <p>Managing emotions and express appropriately.</p>
+            <h2>Social Skills</h2>
+            <p>Sharing, Taking Turns, Cooreration</p>
+            <h2>Following Instructions</h2>
+            <p>Simple instructions and routines.</p>
+            <h2>Self-Help Skills</h2>
+            <p>Practice self-help skills</p>
+            <h2>Physical Development</h2>
+            <p>Gross Motor Skills, Fine Moter Skills.</p>
+            <h2>Creative Development</h2>
+            <p>Imagination and Creativity, Exploration and Discovery</p>
+            <h2>Family Engagement</h2>
+            <p>Home-School Connections, Encourage parental</p>
+            <img src="images/kidsmiling.jpg" alt="children bottom" class="bottom-inside">
+    </div>
+    <div class="footer">
+        <span>Learn</span> · <span>Play</span> · <span>Create</span>
+    </div>
+</body>
+</html>
